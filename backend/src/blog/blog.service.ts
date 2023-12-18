@@ -11,8 +11,8 @@ export class BlogService {
   ) {}
 
   async createBlog(title: string, content: string): Promise<Blog> {
-    const poll = this.blogRepository.create({ title, content });
-    return this.blogRepository.save(poll);
+    const blog = this.blogRepository.create({ title, content });
+    return this.blogRepository.save(blog);
   }
 
   async getAllBlogs(): Promise<Blog[]> {

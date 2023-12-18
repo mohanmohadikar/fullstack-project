@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Blog } from 'src/blog/blog.entity';
+import { CustomUser } from 'src/user/user.entity';
 
 @Module({
   imports: [
@@ -11,7 +12,7 @@ import { Blog } from 'src/blog/blog.entity';
       username: 'postgres',
       password: 'pass@123',
       database: 'fullstack_project_db',
-      entities: [Blog],
+      entities: [Blog, CustomUser],
       synchronize: true,
     }),
   ],
